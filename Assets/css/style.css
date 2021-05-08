@@ -112,7 +112,7 @@ header {
     transition: left 300ms;
 }
 
-header h2 {
+header h1 {
     color: #202321;
 }
 
@@ -192,5 +192,98 @@ main {
     .main-content header {
         width: calc(100% - 70px);
         left: 70px;
+    }
+
+    .sidebar:hover {
+        width: 345px;
+        z-index: 200;
+    }
+    
+    .sidebar:hover .sidebar-logo,
+    .sidebar:hover li {
+        padding-left: 2rem;
+        text-align: left;
+    }
+    
+    .sidebar:hover li a {
+        padding-left: 1rem;
+    }
+    
+    .sidebar:hover .sidebar-logo h1 span:last-child,
+    .sidebar:hover li a span:last-child  {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .search-wrapper {
+        display: none;
+    }
+
+    .sidebar {
+        left: -100% !important;
+    }
+
+    header h1 {
+        display: flex;
+        align-items: center;
+    }
+
+    header h1 label{
+        display: inline-block;
+        background: #39B54A;
+        padding-right: 0rem;
+        margin-right: 1rem;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+    }
+
+    header h1 span {
+        text-align: center;
+        padding-right: 0rem;
+    }
+
+    header h1 {
+        font-size: 1.1rem;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0rem;
+    }
+
+    header {
+        width: 100% !important;
+        left: 0 !important;
+    }
+    
+    #nav-toggle:checked + .sidebar {
+        left: 0 !important;
+        z-index: 100;
+        width: 345px;
+    }
+    
+    #nav-toggle:checked + .sidebar .sidebar-logo,
+    #nav-toggle:checked + .sidebar li {
+        padding-left: 2rem;
+        text-align: left;
+    }
+    
+    #nav-toggle:checked + .sidebar li a {
+        padding-left: 1rem;
+    }
+    
+    #nav-toggle:checked + .sidebar .sidebar-logo h1 span:last-child,
+    #nav-toggle:checked + .sidebar li a span:last-child  {
+        display: inline;
+    }
+
+    #nav-toggle:checked ~ .main-content {
+        margin-left: 0rem !important;
     }
 }
