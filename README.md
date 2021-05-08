@@ -1,4 +1,4 @@
-# Dashboard :cloud:
+# Responsive Dashboard :cloud:
 <p align="center">
-    It's just a dashboard
+    Just a template of a Responsive Dashboard, free to use :smile:, download and enjoy :heart: !!!
 </p>
